@@ -1,0 +1,169 @@
+{
+  "mainOrder": {
+    "companyName": "佛山智冠彩印包装有限公司",
+    "orderNumber": "2025/8/22 13:44",
+    "workOrderNumber": "250220000017505",
+    "customerOrderNumber": "",
+    "qrcode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVGiB7ZpPaBNBFMafJBsT",
+    "importantNotes": "重要说明: 29108—120k-【DH-4-teo】.会计样本-化-光覆膜1egg-8 20250821-转】一以备存: 交付时需奇高品 29108—120k",
+    "specialRemarks": "特别备注: 注意规格清洁",
+    "createdDate": "2025-08-22",
+    "createdTime": "13:44"
+  },
+  "orderDetails": [
+    {
+      "sequence": 1,
+      "materialCode": "",
+      "productName": "覆亮膜【高光尺寸】357x392-300g",
+      "productDescription": "单张艺效品",
+      "specification": "",
+      "orderQuantity": 3,
+      "productCode": "",
+      "unitPrice": 0,
+      "totalAmount": 0
+    },
+    {
+      "sequence": 2,
+      "materialCode": "",
+      "productName": "覆亮膜【高光尺寸】253x654-300g",
+      "productDescription": "单张艺效品",
+      "specification": "",
+      "orderQuantity": 3,
+      "productCode": "",
+      "unitPrice": 0,
+      "totalAmount": 0
+    },
+    {
+      "sequence": 3,
+      "materialCode": "419 5x252-157g效率卡-量感金色",
+      "productName": "",
+      "productDescription": "单张艺效品",
+      "specification": "",
+      "orderQuantity": 3,
+      "productCode": "",
+      "unitPrice": 0,
+      "totalAmount": 0
+    }
+  ],
+  "rawMaterials": {
+    "partName": "部件名称",
+    "materialCodeDescription": "材料规格及文名",
+    "orderRequirement": "订单规格",
+    "quantity": 3,
+    "workingSize": "上机尺寸",
+    "thickness": "厚度",
+    "materialType": "原料类",
+    "grammage": "克数",
+    "totalSheets": "合计张数",
+    "totalQuantity": "总数量",
+    "specifications": [
+      {
+        "name": "157g效率卡",
+        "size": "530x750",
+        "quantity": 3,
+        "workingSize": "530x750"
+      }
+    ]
+  },
+  "publishing": {
+    "partName": "部件名称",
+    "quantity": "数量",
+    "printingProcessRequirements": "拼版说明及工艺要求",
+    "version": "版数",
+    "totalQuantity": "总数",
+    "specifications": "拼版尺寸",
+    "details": [
+      {
+        "name": "主部件",
+        "quantity": 0,
+        "requirement": "",
+        "version": 0,
+        "total": 0,
+        "size": "530x750"
+      }
+    ],
+    "remarks": "HF-INB601200K"
+  },
+  "printing": {
+    "partName": "部件名称",
+    "quantity": "数量",
+    "frontColors": "正面颜色",
+    "backColors": "反面颜色",
+    "unitPrice": "应产数",
+    "totalAmount": "总数",
+    "details": [
+      {
+        "name": "主部件",
+        "quantity": 0,
+        "frontColor": "",
+        "backColor": "",
+        "unitPrice": 0,
+        "total": 0
+      }
+    ],
+    "specialRequirements": "注意规格清洁"
+  },
+  "postProcessing": {
+    "processes": [
+      {
+        "partName": "部件名称",
+        "workstation": "工序",
+        "quantity": "数量",
+        "processRequirements": "工艺要求",
+        "outsourcing": "外发",
+        "unitPrice": "应产",
+        "actualProduction": "实产",
+        "supervisor": "机长",
+        "totalAmount": "总数"
+      }
+    ],
+    "details": [
+      {
+        "name": "主部件",
+        "process": "",
+        "quantity": 0,
+        "requirements": "",
+        "isOutsourced": false,
+        "unitPrice": 0,
+        "actualProduction": 0,
+        "supervisor": "",
+        "total": 0
+      }
+    ]
+  },
+  "auxiliaryMaterials": {
+    "materials": [
+      {
+        "partName": "部件名称",
+        "materialCode": "物料编码",
+        "materialName": "物料名称",
+        "specification": "规格",
+        "unit": "单位",
+        "quantity": "数量",
+        "remarks": "备注",
+        "unitArea": "单耗（㎡）",
+        "totalAmount": "总数"
+      }
+    ],
+    "details": [
+      {
+        "name": "主部件",
+        "code": "",
+        "materialName": "",
+        "spec": "",
+        "unit": "",
+        "quantity": 0,
+        "note": "",
+        "unitArea": 0,
+        "total": 0
+      }
+    ]
+  },
+  "footer": {
+    "approver": "制单",
+    "reviewer": "文件制作",
+    "businessUnit": "业务员",
+    "customer": "顾客",
+    "supervisor": "主管"
+  }
+}

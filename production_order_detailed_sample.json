@@ -1,0 +1,218 @@
+{
+  "mainOrder": {
+    "companyName": "佛山智冠彩印包装有限公司",
+    "companyLogo": "company_logo_placeholder",
+    "orderNumber": "2025/8/22 13:44",
+    "workOrderNumber": "250220000017505",
+    "customerOrderNumber": "",
+    "qrcode": "https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=250220000017505",
+    "importantNotes": "重要说明: 29108—120k-【DH-4-teo】.会计样本-化-光覆膜1egg-8 20250821-转】一以备存: 交付时需奇高品 29108—120k",
+    "specialRemarks": "特别备注: 注意规格清洁",
+    "createdDate": "2025-08-22",
+    "createdTime": "13:44",
+    "status": "active",
+    "priority": "normal"
+  },
+  "orderDetails": [
+    {
+      "sequence": 1,
+      "materialCode": "",
+      "productName": "覆亮膜【高光尺寸】357x392-300g",
+      "productDescription": "单张艺效品",
+      "specification": "高光覆膜",
+      "orderQuantity": 3,
+      "productCode": "GLF-357392-300",
+      "unitPrice": 0.0,
+      "totalAmount": 0.0,
+      "unit": "张"
+    },
+    {
+      "sequence": 2,
+      "materialCode": "",
+      "productName": "覆亮膜【高光尺寸】253x654-300g", 
+      "productDescription": "单张艺效品",
+      "specification": "高光覆膜",
+      "orderQuantity": 3,
+      "productCode": "GLF-253654-300",
+      "unitPrice": 0.0,
+      "totalAmount": 0.0,
+      "unit": "张"
+    },
+    {
+      "sequence": 3,
+      "materialCode": "419",
+      "productName": "5x252-157g效率卡-量感金色",
+      "productDescription": "单张艺效品",
+      "specification": "157g效率卡",
+      "orderQuantity": 3,
+      "productCode": "EFC-5252-157-GOLD",
+      "unitPrice": 0.0,
+      "totalAmount": 0.0,
+      "unit": "张"
+    }
+  ],
+  "rawMaterials": {
+    "summary": {
+      "partName": "部件名称",
+      "materialCodeDescription": "材料规格及文名", 
+      "orderRequirement": "订单规格",
+      "quantity": "数量",
+      "workingSize": "上机尺寸",
+      "thickness": "厚度",
+      "materialType": "原料类",
+      "grammage": "克数", 
+      "totalSheets": "合计张数",
+      "totalQuantity": "总数量"
+    },
+    "specifications": [
+      {
+        "partName": "主部件",
+        "materialDescription": "157g效率卡",
+        "orderSpec": "530x750",
+        "quantity": 3,
+        "workingSize": "530x750",
+        "thickness": "0.157mm",
+        "materialType": "艺术纸",
+        "grammage": "157g",
+        "totalSheets": 3,
+        "totalQuantity": 3
+      }
+    ]
+  },
+  "publishing": {
+    "summary": {
+      "partName": "部件名称",
+      "quantity": "数量", 
+      "printingProcessRequirements": "拼版说明及工艺要求",
+      "version": "版数",
+      "totalQuantity": "总数",
+      "specifications": "拼版尺寸"
+    },
+    "details": [
+      {
+        "partName": "主部件",
+        "quantity": 3,
+        "requirement": "标准拼版，注意色彩校准",
+        "version": 1,
+        "total": 3,
+        "size": "530x750"
+      }
+    ],
+    "remarks": "HF-INB601200K",
+    "layoutRequirements": "按标准版式排版，确保色彩一致性"
+  },
+  "printing": {
+    "summary": {
+      "partName": "部件名称",
+      "quantity": "数量",
+      "frontColors": "正面颜色", 
+      "backColors": "反面颜色",
+      "unitPrice": "应产数",
+      "totalAmount": "总数"
+    },
+    "details": [
+      {
+        "partName": "主部件",
+        "quantity": 3,
+        "frontColor": "4C+专色金",
+        "backColor": "1C黑",
+        "unitPrice": 3,
+        "total": 3
+      }
+    ],
+    "specialRequirements": "注意规格清洁",
+    "colorRequirements": "CMYK + 专色金，色彩饱和度要求高",
+    "qualityStandards": "符合ISO 12647-2标准"
+  },
+  "postProcessing": {
+    "summary": {
+      "partName": "部件名称",
+      "workstation": "工序",
+      "quantity": "数量",
+      "processRequirements": "工艺要求", 
+      "outsourcing": "外发",
+      "unitPrice": "应产",
+      "actualProduction": "实产",
+      "supervisor": "机长",
+      "totalAmount": "总数"
+    },
+    "processes": [
+      {
+        "partName": "主部件",
+        "process": "覆膜",
+        "quantity": 3,
+        "requirements": "高光覆膜，无气泡",
+        "isOutsourced": false,
+        "unitPrice": 3,
+        "actualProduction": 0,
+        "supervisor": "张师傅",
+        "total": 3
+      },
+      {
+        "partName": "主部件", 
+        "process": "模切",
+        "quantity": 3,
+        "requirements": "精确模切，边缘光滑",
+        "isOutsourced": false,
+        "unitPrice": 3,
+        "actualProduction": 0,
+        "supervisor": "李师傅",
+        "total": 3
+      }
+    ]
+  },
+  "auxiliaryMaterials": {
+    "summary": {
+      "partName": "部件名称",
+      "materialCode": "物料编码",
+      "materialName": "物料名称",
+      "specification": "规格",
+      "unit": "单位", 
+      "quantity": "数量",
+      "remarks": "备注",
+      "unitArea": "单耗（㎡）",
+      "totalAmount": "总数"
+    },
+    "materials": [
+      {
+        "partName": "主部件",
+        "materialCode": "FILM-001",
+        "materialName": "高光覆膜胶膜",
+        "specification": "0.012mm厚度",
+        "unit": "㎡",
+        "quantity": 2.5,
+        "remarks": "高透明度",
+        "unitArea": 0.83,
+        "total": 2.5
+      },
+      {
+        "partName": "主部件",
+        "materialCode": "ADH-002", 
+        "materialName": "覆膜专用胶水",
+        "specification": "水性环保胶",
+        "unit": "kg",
+        "quantity": 0.1,
+        "remarks": "环保无味",
+        "unitArea": 0.033,
+        "total": 0.1
+      }
+    ]
+  },
+  "footer": {
+    "approver": "王经理",
+    "reviewer": "李设计",
+    "businessUnit": "张业务", 
+    "customer": "ABC公司",
+    "supervisor": "陈主管",
+    "approvalDate": "2025-08-22",
+    "reviewDate": "2025-08-22"
+  },
+  "metadata": {
+    "version": "1.0",
+    "createdBy": "系统管理员",
+    "lastModified": "2025-08-22T13:44:00Z",
+    "documentType": "生产订单",
+    "language": "zh-CN",
+    "currency": "CNY"
+  }
+}
