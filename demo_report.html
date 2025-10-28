@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生产订单报表 - 250220000017505</title>
+    <style>
+        /* 基础样式 - 复制PDF的视觉效果 */
+        body {
+            font-family: "SimSun", "MS Song", serif;
+            margin: 0;
+            padding: 20px;
+            background: white;
+            font-size: 10.5px;
+            line-height: 1.2;
+        }
+        
+        .report-container {
+            width: 595px; /* PDF width in points */
+            margin: 0 auto;
+            background: white;
+            min-height: 842px; /* PDF height in points */
+            position: relative;
+        }
+        
+        /* 页眉 - 公司标题 */
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .company-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        /* 订单信息行 */
+        .order-info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 10.5px;
+        }
+        
+        .order-info-item {
+            display: inline-block;
+        }
+        
+        /* 客户信息行 */
+        .customer-info {
+            margin-bottom: 15px;
+            font-size: 10.5px;
+        }
+        
+        /* 表格样式 */
+        .section-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 10.5px;
+        }
+        
+        .section-table th,
+        .section-table td {
+            border: 1px solid #000;
+            padding: 3px 5px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .section-table th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        /* 产品详情表格 */
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 9px;
+        }
+        
+        .product-table th,
+        .product-table td {
+            border: 1px solid #000;
+            padding: 2px 3px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .product-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        /* 重要说明 */
+        .important-notes {
+            margin: 10px 0;
+            padding: 5px;
+            background-color: #fff8dc;
+            border: 1px solid #ddd;
+            font-size: 9px;
+        }
+        
+        /* 各个业务部分 */
+        .business-section {
+            margin-bottom: 15px;
+        }
+        
+        .section-header {
+            background-color: #f0f0f0;
+            padding: 3px 5px;
+            border: 1px solid #000;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        
+        .section-label {
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            background-color: #f0f0f0;
+            border: 1px solid #000;
+            padding: 5px 3px;
+            text-align: center;
+            font-weight: bold;
+            width: 20px;
+        }
+        
+        /* 脚注 */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            border-top: 1px solid #ccc;
+            padding-top: 5px;
+        }
+        
+        /* 布局容器 */
+        .section-container {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .section-content {
+            flex: 1;
+        }
+        
+        /* 特别备注 */
+        .special-remarks {
+            margin: 8px 0;
+            font-size: 9px;
+            font-weight: bold;
+        }
+        
+        /* QR 码位置 */
+        .qr-code {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+        }
+        
+        /* 响应式调整 */
+        @media screen and (max-width: 700px) {
+            .report-container {
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .footer {
+                position: relative;
+                bottom: auto;
+            }
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .report-container {
+                width: 100%;
+                margin: 0;
+            }
+            
+            .footer {
+                position: fixed;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <!-- QR码 -->
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=250220000017505" alt="QR Code" style="width: 100%; height: 100%;">
+        </div>
+        
+        <!-- 页眉 -->
+        <div class="header">
+            <div class="company-title">佛山智冠彩印包装有限公司生产单</div>
+        </div>
+        
+        <!-- 订单信息行 -->
+        <div class="order-info-row">
+            <span class="order-info-item">订单类型：</span>
+            <span class="order-info-item">下单日期：2025/8/22 13:44</span>
+            <span class="order-info-item">工单编号：250220000017505</span>
+        </div>
+        
+        <!-- 客户信息 -->
+        <div class="customer-info">
+            <span>广州至坚文化创意有限公司</span>
+            <span style="margin-left: 50px;">订单号：</span>
+            <span style="margin-left: 50px;">资料袋</span>
+            <span style="margin-left: 50px;">旧单编号：</span>
+        </div>
+        
+        <!-- 产品详情表格 -->
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>物料编码</th>
+                    <th>产品名称</th>
+                    <th>成品尺寸</th>
+                    <th>订单数</th>
+                    <th>备品</th>
+                    <th>应产数</th>
+                    <th>交期</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td>覆亮膜【高光尺寸】357x392-300g<br>单张艺效品<br>高光覆膜</td>
+            <td>自定义成品</td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td>覆亮膜【高光尺寸】253x654-300g<br>单张艺效品<br>高光覆膜</td>
+            <td>自定义成品</td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>419</td>
+            <td>5x252-157g效率卡-量感金色<br>单张艺效品<br>157g效率卡</td>
+            <td>自定义成品</td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            </tbody>
+        </table>
+        
+        <!-- 重要说明 -->
+        <div class="important-notes">
+            <strong>重要说明：</strong>重要说明: 29108—120k-【DH-4-teo】.会计样本-化-光覆膜1egg-8 20250821-转】一以备存: 交付时需奇高品 29108—120k
+        </div>
+        
+        <!-- 原材部分 -->
+        <div class="business-section">
+            <div class="section-container">
+                <div class="section-label">原<br>材</div>
+                <div class="section-content">
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>部件名称</th>
+                                <th>物料编码及名称</th>
+                                <th>订单规格</th>
+                                <th>数量</th>
+                                <th>上机尺寸</th>
+                                <th>开度</th>
+                                <th>发料数</th>
+                                <th>模数</th>
+                                <th>合计张数</th>
+                                <th>损耗数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td>主部件</td>
+            <td>157g效率卡</td>
+            <td>530x750</td>
+            <td>3</td>
+            <td>530x750</td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 出版部分 -->
+        <div class="business-section">
+            <div class="section-container">
+                <div class="section-label">出<br>版</div>
+                <div class="section-content">
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>部件名称</th>
+                                <th>模数</th>
+                                <th>拼版说明及工艺要求</th>
+                                <th>版数</th>
+                                <th>套数</th>
+                                <th>拼版尺寸</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td>主部件</td>
+            <td>3</td>
+            <td>标准拼版，注意色彩校准</td>
+            <td>1</td>
+            <td>3</td>
+            <td>530x750</td>
+        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 印刷部分 -->
+        <div class="business-section">
+            <div class="section-container">
+                <div class="section-label">印<br>刷</div>
+                <div class="section-content">
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>部件名称</th>
+                                <th>模数</th>
+                                <th>正面颜色</th>
+                                <th>反面颜色</th>
+                                <th>应产数</th>
+                                <th>放数</th>
+                                <th>机台</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td>主部件</td>
+            <td>3</td>
+            <td>4C+专色金</td>
+            <td>1C黑</td>
+            <td></td>
+            <td></td>
+            <td>HP-INDIGO120K</td>
+        </tr>
+                        </tbody>
+                    </table>
+                    <div class="special-remarks">特别备注：注意规格清洁</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 后工序部分 -->
+        <div class="business-section">
+            <div class="section-container">
+                <div class="section-label">后<br>工<br>序</div>
+                <div class="section-content">
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>部件名称</th>
+                                <th>工序</th>
+                                <th>模数</th>
+                                <th>工艺要求</th>
+                                <th>外发</th>
+                                <th>应产</th>
+                                <th>实产</th>
+                                <th>机长</th>
+                                <th>放数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td>主部件</td>
+            <td>覆膜</td>
+            <td></td>
+            <td>高光覆膜，无气泡</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>张师傅</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>主部件</td>
+            <td>模切</td>
+            <td></td>
+            <td>精确模切，边缘光滑</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>李师傅</td>
+            <td></td>
+        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 辅材部分 -->
+        <div class="business-section">
+            <div class="section-container">
+                <div class="section-label">辅<br>材</div>
+                <div class="section-content">
+                    <table class="section-table">
+                        <thead>
+                            <tr>
+                                <th>部件名称</th>
+                                <th>物料编码</th>
+                                <th>物料名称</th>
+                                <th>规格</th>
+                                <th>单位</th>
+                                <th>数量</th>
+                                <th>备注</th>
+                                <th>面积（㎡）</th>
+                                <th>配数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+        <tr>
+            <td>主部件</td>
+            <td>FILM-001</td>
+            <td>高光覆膜胶膜</td>
+            <td>0.012mm厚度</td>
+            <td>㎡</td>
+            <td>2.5</td>
+            <td>高透明度</td>
+            <td>0.83</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>主部件</td>
+            <td>ADH-002</td>
+            <td>覆膜专用胶水</td>
+            <td>水性环保胶</td>
+            <td>kg</td>
+            <td>0.1</td>
+            <td>环保无味</td>
+            <td>0.033</td>
+            <td></td>
+        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <div class="footer">
+            <span>制单：张业务</span>
+            <span>文件制作：李设计</span>
+            <span>业务员：小李</span>
+            <span>跟单：小林</span>
+            <span>审核：王经理</span>
+        </div>
+    </div>
+</body>
+</html>
